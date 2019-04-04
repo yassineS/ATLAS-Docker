@@ -25,3 +25,7 @@ RUN make
 
 ### Addition the binary location to the PATH
 ENV PATH="/app/atlas:$PATH"
+
+## Adding specific bindpoints required by ACAD's hosts
+RUN touch  /etc/localtime
+RUN mkdir -p  /localscratch
